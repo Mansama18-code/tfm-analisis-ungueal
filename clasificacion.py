@@ -17,11 +17,11 @@ app.add_middleware(
 )
 
 # Cargar el modelo guardado por el script de Jupyter
-# Sustituye 'mejor_modelo_MobileNetV2.h5' por el nombre exacto de tu archivo .h5
+
 MODEL_PATH = "/Users/mansama18/Desktop/webdiseno/unir/TFM/v2/models/mejor_modelo_EfficientNetB0.h5"
 model = tf.keras.models.load_model(MODEL_PATH)
 
-# Asegúrate de que las clases coincidan con las de tu entrenamiento
+
 CLASS_NAMES = ['beau_s line', 'black line', 'clubbing', 'normal', 'onicomicosis', 'white spot']
 
 def preprocess_image(image_bytes: bytes) -> np.ndarray:
