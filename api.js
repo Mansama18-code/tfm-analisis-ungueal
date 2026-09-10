@@ -29,8 +29,15 @@ async function enviarImagenBackend(archivoImagen) {
 
         const jsonResult = await response.json();
         
-        // Imprime el JSON directamente en el elemento de pantalla de tu Frontend
-        document.getElementById("pantalla-json").textContent = JSON.stringify(jsonResult, null, 2);
+        // Imprime el JSON en el frontend. Acá se modifica
+        document.getElementById("predominante").textContent = JSON.stringify(jsonResult['patron_predominante'], null, 2);
+        document.getElementById("confianza").textContent = JSON.stringify(jsonResult['indice_confianza'], null, 2);
+
+        contenido = `
+                     <pre>${JSON.stringify(jsonResult['patron_predominante'], null, 2)}</pre> 
+                     <pre>${JSON.stringify(jsonResult['coincidencias_visuales'], null, 2)}</pre> 
+                    `;
+        document.getElementById("pantalla-json").innerHTML = contenido;
     } catch (error) {
         console.error("Error al conectar con la API:", error);
     }
