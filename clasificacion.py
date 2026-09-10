@@ -27,7 +27,7 @@ CLASS_NAMES = ['beau_s line', 'black line', 'clubbing', 'normal', 'onicomicosis'
 def preprocess_image(image_bytes: bytes) -> np.ndarray:
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     image = image.resize((224, 224))
-    #img_array = np.array(image, dtype=np.float32) / 255.0
+    img_array = np.array(image, dtype=np.float32)
     # NO DIVIDIR ENTRE 255.0 AQUÍ. Pasar directamente por preprocess_input:
     img_array = tf.keras.applications.efficientnet.preprocess_input(img_array)
     img_array = np.expand_dims(img_array, axis=0)
