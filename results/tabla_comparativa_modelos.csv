@@ -1,0 +1,3 @@
+Modelo,Accuracy Validación,Loss Validación,Tiempo Entrenamiento (seg)
+MobileNetV2,65.07,3.6132,1580.71
+EfficientNetB0,91.7,0.267,2116.57

@@ -1,0 +1,262 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head></head><body class="bg-background text-on-background font-body-base min-h-screen pb-24 md:pb-0"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SISTEMAS - Análisis de Uñas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#004e5a",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline-variant": "#c2c6d4",
+                        "primary": "#00488d",
+                        "secondary-fixed": "#a2eeff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#a8c8ff",
+                        "secondary-container": "#53e3fd",
+                        "secondary": "#006877",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#58616b",
+                        "primary-fixed": "#d6e3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#cadcff",
+                        "on-secondary-container": "#006371",
+                        "on-background": "#191c1e",
+                        "surface-dim": "#d8dadc",
+                        "outline": "#727783",
+                        "surface-variant": "#e0e3e5",
+                        "on-surface-variant": "#424752",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#005fb8",
+                        "on-primary-fixed": "#001b3d",
+                        "tertiary-fixed-dim": "#bec7d2",
+                        "surface-container-low": "#f2f4f6",
+                        "secondary-fixed-dim": "#43d8f2",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#a8c8ff",
+                        "on-secondary-fixed": "#001f25",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#00468b",
+                        "on-tertiary-fixed": "#141c25",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-tint": "#005db5",
+                        "surface-container-highest": "#e0e3e5",
+                        "tertiary": "#404952",
+                        "tertiary-fixed": "#dae3ef",
+                        "surface-container": "#eceef0",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-fixed-variant": "#3f4851",
+                        "on-tertiary-container": "#d3dce7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "container-max": "1200px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Public Sans"],
+                        "data-display": ["Public Sans"],
+                        "section-title": ["Public Sans"],
+                        "body-base": ["Public Sans"],
+                        "body-sm": ["Public Sans"],
+                        "headline-md": ["Public Sans"],
+                        "headline-lg": ["Public Sans"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                        "data-display": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                        "section-title": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-base": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dashed-border {
+            background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23CBD5E1' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        }
+        .flow-line {
+            stroke: #727783;
+            stroke-width: 1.5;
+            fill: none;
+        }
+    </style>
+
+
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full">menu</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">ANALIZADOR DE UÑAS</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-high transition-colors p-2 rounded-full">account_circle</button>
+</div>
+</header> 
+
+<main class="mt-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- ANALYSIS SECTION -->
+<section class="mb-stack-lg">
+<h2 class="font-section-title text-section-title text-on-surface-variant uppercase tracking-widest mb-stack-md">ANALISIS</h2>
+<div class="relative">
+<div class="dashed-border bg-white rounded-xl h-48 flex flex-col items-center justify-center cursor-pointer hover:bg-primary/5 transition-all group" id="drop-zone" onchange="manejarSeleccionImagen(event)">
+<span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary transition-colors mb-2">photo_camera</span>
+<div class="flex flex-col items-center">
+<span class="font-body-base text-on-surface-variant">Capturar una imagen</span>
+<span class="font-label-bold text-primary underline mt-1">o cargar</span>
+</div>
+<input class="hidden" id="file-input" type="file">
+</div>
+<div class="flex justify-end mt-stack-md">
+<button class="bg-primary text-on-primary font-label-bold text-label-bold px-8 py-3 rounded-lg shadow-sm hover:opacity-90 active:scale-95 transition-all uppercase tracking-wider" id="analyze-btn">
+                        ANALIZAR
+                    </button>
+</div>
+</div>
+</section>
+<!-- RESPONSE SECTION (Initially Hidden or Visualized for the mockup) -->
+<section class="mb-stack-lg animate-in fade-in slide-in-from-bottom-4 duration-700" id="results-section">
+<h2 class="font-section-title text-section-title text-on-surface-variant uppercase tracking-widest mb-stack-md">CONCLUSIONES</h2>
+<div class="bg-white border border-outline-variant rounded-xl p-stack-md md:p-stack-lg flex flex-col md:flex-row gap-gutter shadow-sm">
+<!-- Image Placeholder -->
+<div class="w-full md:w-1/3 aspect-square bg-surface-container rounded-lg overflow-hidden flex items-center justify-center border border-outline-variant">
+<img alt="Nail image" class="w-full h-full object-cover" data-alt="A clinical" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxQN_Nie3e4JI26aQcQici8xgFIUqYzEWL9bnikexqBkJ6lMuxPbVMWdiksYF17chQcjbQBhOPVxgysNTqARy2Yfvz37qo6DfELj3Z3dzNbmu7zdsj3xkX-awIjvBZHA5EF2rzJCAnZFfeP870e8u2xvbVVeIBVA4SV5-900HML5zjIP-aFcS6Lm4FOI8JtR9-USGAVXMp7IfqA1SRLRc1ME0kzelfK7VY9cwoVOUUJFG2xybh09aAssxKvwbyXN5-hP-aMAoiIXsiA">
+</div>
+<!-- Results Bars -->
+<div class="flex-1 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-stack-md italic">El análisis realizado presenta coincidencias orientativas a:</h3>
+<div class="space-y-stack-md"><!-- Item 1 -->
+<div class="flex justify-between items-center py-2 border-b border-outline-variant">
+    <span class="font-body-base text-on-surface" id="pantalla-json"></span>
+    
+</div>
+<!-- Item 2 -->
+<div class="flex justify-between items-center py-2 border-b border-outline-variant">
+    <span class="font-body-base text-on-surface"></span>
+    
+</div>
+<!-- Item 3 -->
+<div class="flex justify-between items-center py-2">
+    <span class="font-body-base text-on-surface"></span>
+    
+</div></div>
+<div class="mt-stack-md p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+    <p class="font-label-bold text-error mb-2 uppercase tracking-wider">Aviso de no diagnóstico</p>
+    <p class="font-body-sm text-on-surface-variant italic mb-4">Este análisis es de carácter informativo y no constituye un diagnóstico médico.</p>
+    
+    <div class="space-y-2">
+        <p class="font-section-title text-section-title text-on-surface uppercase tracking-widest border-b border-outline-variant pb-1">Detalles Técnicos</p>
+        <div class="flex justify-between text-body-sm">
+            <span class="text-on-surface-variant">Calidad de imagen:</span>
+            <span class="font-bold text-primary">Alta</span>
+        </div>
+        <div class="flex justify-between text-body-sm">
+            <span class="text-on-surface-variant">Clase detectada:</span>
+            <span class="font-bold text-primary">Onicomicosis sugerida</span>
+        </div>
+        <div class="flex justify-between text-body-sm">
+            <span class="text-on-surface-variant">Confianza:</span>
+            <span class="font-bold text-primary">0.90</span>
+        </div>
+    </div>
+</div></div>
+</div><div class="mt-stack-md space-y-stack-md">
+    <div class="flex items-start gap-2 text-on-surface-variant">
+        <span class="material-symbols-outlined text-primary">info</span>
+        <p class="font-body-base"><span class="font-bold">Recomendación:</span> Se recomienda encarecidamente consultar a un profesional médico para una evaluación clínica.</p>
+    </div>
+    <p class="font-body-sm text-outline italic">Nota: Las variaciones en la iluminación y la resolución de la cámara pueden afectar la precisión del modelo.</p>
+   
+</div>
+</section>
+
+</main>
+<!-- BottomNavBar (Visible on Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center py-2 bg-surface border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">magnification_small</span>
+<span class="font-label-bold text-label-bold">Análisis</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-bold text-label-bold">Historial</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-colors px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-bold text-label-bold">Ajustes</span>
+</a>
+</nav>
+<script src="/Users/mansama18/Desktop/webdiseno/unir/TFM/v2/api.js"></script>
+<script>
+        // Micro-interactions for the analysis button
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const resultsSection = document.getElementById('results-section');
+        const dropZone = document.getElementById('drop-zone');
+        const newImage = document.getElementById('');
+
+        analyzeBtn.addEventListener('click', () => {
+            // Simulated loading state
+            analyzeBtn.innerHTML = 'PROCESANDO...';
+            analyzeBtn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                analyzeBtn.innerHTML = 'ANALIZAR';
+                analyzeBtn.classList.remove('opacity-50');
+                
+                // Scroll to results and flash them
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+                resultsSection.classList.add('ring-2', 'ring-primary/20');
+                setTimeout(() => resultsSection.classList.remove('ring-2'), 1000);
+            }, 1500);
+        });
+
+        // Drop zone highlight
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('bg-primary/10');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('bg-primary/10');
+        });
+
+        dropZone.addEventListener('click', () => {
+            document.getElementById('file-input').click();
+        });
+    </script>
+
+
+
+
+
+
+</body></html>
