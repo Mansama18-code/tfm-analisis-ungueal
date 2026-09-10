@@ -1,3 +1,22 @@
+
+function manejarSeleccionImagen(event) {
+    if (event && event.target && event.target.files && event.target.files.length > 0) {
+        const archivo = event.target.files[0];
+
+        const urlImagenLocal = URL.createObjectURL(archivo);
+
+        // 2. Obtener el elemento img por su ID y actualizar su atributo 'src'
+        const imagenTag = document.getElementById("imagen-previsualizacion");
+        if (imagenTag) {
+            imagenTag.src = urlImagenLocal;
+        }
+
+        enviarImagenBackend(archivo);
+    } else {
+        console.warn("No se seleccionó ningún archivo o la selección fue cancelada.");
+    }
+}
+    
 async function enviarImagenBackend(archivoImagen) {
     const formData = new FormData();
     formData.append("file", archivoImagen);

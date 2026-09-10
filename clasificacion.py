@@ -22,28 +22,23 @@ MODEL_PATH = "/Users/mansama18/Desktop/webdiseno/unir/TFM/v2/models/mejor_modelo
 model = tf.keras.models.load_model(MODEL_PATH)
 
 # Asegúrate de que las clases coincidan con las de tu entrenamiento
-CLASS_NAMES = [
-    "Normal",
-    "Lineas de Beau",
-    "Líneas Negras",
-    "Clubbing",
-    "Puntos Blancos",
-    "Sospecha Onicomicosis",
-    "No Evaluable"
-]
+CLASS_NAMES = ['beau_s line', 'black line', 'clubbing', 'normal', 'onicomicosis', 'white spot']
 
 def preprocess_image(image_bytes: bytes) -> np.ndarray:
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
     image = image.resize((224, 224))
-    img_array = np.array(image, dtype=np.float32) / 255.0
+    #img_array = np.array(image, dtype=np.float32) / 255.0
+    # NO DIVIDIR ENTRE 255.0 AQUÍ. Pasar directamente por preprocess_input:
+    img_array = tf.keras.applications.efficientnet.preprocess_input(img_array)
     img_array = np.expand_dims(img_array, axis=0)
+    #img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     image_bytes = await file.read()
     tensor_image = preprocess_image(image_bytes)
-    
+
     # Realizar inferencia
     predictions = model.predict(tensor_image)[0]
     best_idx = int(np.argmax(predictions))

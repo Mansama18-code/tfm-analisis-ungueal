@@ -128,13 +128,13 @@
 <section class="mb-stack-lg">
 <h2 class="font-section-title text-section-title text-on-surface-variant uppercase tracking-widest mb-stack-md">ANALISIS</h2>
 <div class="relative">
-<div class="dashed-border bg-white rounded-xl h-48 flex flex-col items-center justify-center cursor-pointer hover:bg-primary/5 transition-all group" id="drop-zone" onchange="manejarSeleccionImagen(event)">
+<div class="dashed-border bg-white rounded-xl h-48 flex flex-col items-center justify-center cursor-pointer hover:bg-primary/5 transition-all group" id="drop-zone" ">
 <span class="material-symbols-outlined text-[48px] text-outline group-hover:text-primary transition-colors mb-2">photo_camera</span>
 <div class="flex flex-col items-center">
 <span class="font-body-base text-on-surface-variant">Capturar una imagen</span>
-<span class="font-label-bold text-primary underline mt-1">o cargar</span>
+<span class="font-label-bold text-primary underline mt-1" >o cargar</span>
 </div>
-<input class="hidden" id="file-input" type="file">
+<input  id="file-input" type="file" accept="image/*" onchange="manejarSeleccionImagen(event)">
 </div>
 <div class="flex justify-end mt-stack-md">
 <button class="bg-primary text-on-primary font-label-bold text-label-bold px-8 py-3 rounded-lg shadow-sm hover:opacity-90 active:scale-95 transition-all uppercase tracking-wider" id="analyze-btn">
@@ -149,7 +149,7 @@
 <div class="bg-white border border-outline-variant rounded-xl p-stack-md md:p-stack-lg flex flex-col md:flex-row gap-gutter shadow-sm">
 <!-- Image Placeholder -->
 <div class="w-full md:w-1/3 aspect-square bg-surface-container rounded-lg overflow-hidden flex items-center justify-center border border-outline-variant">
-<img alt="Nail image" class="w-full h-full object-cover" data-alt="A clinical" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxQN_Nie3e4JI26aQcQici8xgFIUqYzEWL9bnikexqBkJ6lMuxPbVMWdiksYF17chQcjbQBhOPVxgysNTqARy2Yfvz37qo6DfELj3Z3dzNbmu7zdsj3xkX-awIjvBZHA5EF2rzJCAnZFfeP870e8u2xvbVVeIBVA4SV5-900HML5zjIP-aFcS6Lm4FOI8JtR9-USGAVXMp7IfqA1SRLRc1ME0kzelfK7VY9cwoVOUUJFG2xybh09aAssxKvwbyXN5-hP-aMAoiIXsiA">
+<img id="imagen-previsualizacion" alt="Nail image" class="w-full h-full object-cover" data-alt="A clinical" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjxQN_Nie3e4JI26aQcQici8xgFIUqYzEWL9bnikexqBkJ6lMuxPbVMWdiksYF17chQcjbQBhOPVxgysNTqARy2Yfvz37qo6DfELj3Z3dzNbmu7zdsj3xkX-awIjvBZHA5EF2rzJCAnZFfeP870e8u2xvbVVeIBVA4SV5-900HML5zjIP-aFcS6Lm4FOI8JtR9-USGAVXMp7IfqA1SRLRc1ME0kzelfK7VY9cwoVOUUJFG2xybh09aAssxKvwbyXN5-hP-aMAoiIXsiA">
 </div>
 <!-- Results Bars -->
 <div class="flex-1 flex flex-col justify-center">
@@ -215,7 +215,9 @@
 <span class="font-label-bold text-label-bold">Ajustes</span>
 </a>
 </nav>
-<script src="/Users/mansama18/Desktop/webdiseno/unir/TFM/v2/api.js"></script>
+<script src="./api.js">
+ 
+</script>
 <script>
         // Micro-interactions for the analysis button
         const analyzeBtn = document.getElementById('analyze-btn');
@@ -227,7 +229,7 @@
             // Simulated loading state
             analyzeBtn.innerHTML = 'PROCESANDO...';
             analyzeBtn.classList.add('opacity-50');
-            
+            manejarSeleccionImagen(event)
             setTimeout(() => {
                 analyzeBtn.innerHTML = 'ANALIZAR';
                 analyzeBtn.classList.remove('opacity-50');
